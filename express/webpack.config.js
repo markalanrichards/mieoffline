@@ -12,7 +12,6 @@ fs.readdirSync('../node_modules')
   });
 
 module.exports = {
-
   devtool: 'cheap-module-eval-source-map',
   entry: './start.js',
   output: {

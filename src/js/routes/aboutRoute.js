@@ -1,10 +1,13 @@
 import React from 'react';
+import about from 'html!../../html/about.html'
+console.log(typeof about)
+var AboutRoute = React.createClass({
+  render: function () {
+    function getAbout() {
+      return {__html: about};
+    }
 
-var AboutRoute =React.createClass({
-  render() {
-    return (
-    <h1>Hello, About!</h1>
-  )
+    return (<div dangerouslySetInnerHTML={getAbout()}/>)
   }
 });
 export default AboutRoute;
