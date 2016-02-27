@@ -1,0 +1,57 @@
+{
+  "name": "mieoffline",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "kill3000": "./kill3000.sh",
+    "clean": "rm -rf ./dist",
+    "purge": "npm run clean && rm -rf ./node_modules",
+    "test-webpack": "cd test && webpack",
+    "express-webpack": "npm run compile && cd express && webpack",
+    "test-karma": "karma start",
+    "test": "npm run test-webpack && npm run test-karma",
+    "compile": "npm run clean && cd src/js && webpack",
+    "start": "npm run express-webpack && node --harmony ./dist/express/bundle.js",
+    "jenkins": "npm run kill3000 ; npm run purge && npm install -DE && npm run compile && npm run test",
+    "jsdoc": "jsdoc src/js/interface/database.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/markalanrichards/mieoffline.git"
+  },
+  "author": "",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/markalanrichards/mieoffline/issues"
+  },
+  "devDependencies": {
+    "autoprefixer": "6.2.1",
+    "babel-core": "6.3.21",
+    "babel-loader": "6.2.0",
+    "babel-preset-es2015": "6.3.13",
+    "babel-preset-react": "6.3.13",
+    "expect": "1.13.4",
+    "express": "4.13.3",
+    "history": "1.17.0",
+    "html-loader": "0.4.0",
+    "jsdoc": "3.4.0",
+    "karma": "0.13.19",
+    "karma-mocha": "0.2.1",
+    "karma-phantomjs-launcher": "0.2.1",
+    "mocha": "2.3.4",
+    "mocha-clean": "1.0.0",
+    "mongodb": "2.1.4",
+    "phantomjs": "1.9.19",
+    "phantomjs-polyfill": "0.0.1",
+    "postcss": "5.0.14",
+    "postcss-cssnext": "2.4.0",
+    "precss": "1.4.0",
+    "react": "0.14.5",
+    "react-addons-test-utils": "0.14.5",
+    "react-dom": "0.14.3",
+    "react-router": "1.0.3",
+    "webpack": "1.12.9"
+  },
+  "homepage": "https://github.com/markalanrichards/mieoffline#readme"
+}
