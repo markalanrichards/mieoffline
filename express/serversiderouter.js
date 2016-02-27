@@ -14,7 +14,7 @@ export default function (req, res) {
     if (error) {
       res.status(500).send(error.message)
     } else if (redirectLocation) {
-      res.redirect(302, redirectLocation.pathname + redirectLocation.search)
+      res.redirect(302, req.pathname + redirectLocation.search)
     } else if (renderProps) {
       res.status(200).send('<!DOCTYPE html><html><body><div id="main">' + renderToString(<RoutingContext {...renderProps} /> )+ '</div></body></html>')
     } else {

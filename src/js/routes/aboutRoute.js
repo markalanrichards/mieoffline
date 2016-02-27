@@ -1,10 +1,10 @@
 import React from 'react';
 
-var HelloWorldRoute =React.createClass({
+var AboutRoute =React.createClass({
   render() {
     return (
-    <h1>Hello, World!</h1>
+    <h1>Hello, About!</h1>
   )
   }
 });
-export default HelloWorldRoute;
+export default AboutRoute;
