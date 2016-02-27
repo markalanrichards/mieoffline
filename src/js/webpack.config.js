@@ -1,13 +1,17 @@
 var autoprefixer = require('autoprefixer');
 var precss      = require('precss');
 
+var webpack = require("webpack")
 
 module.exports = {
   devtool: 'cheap-module-eval-source-map',
-  entry: './router.js',
+  entry: {
+    app: './router.js',
+    vendor: ['react', 'react-dom']
+  },
   output: {
     path: '../../dist/app',
-    filename: 'bundle.js',
+    filename: '[name].js',
   },
   module: {
     loaders: [{
@@ -28,5 +32,7 @@ module.exports = {
     precss,
     autoprefixer,
   ],
-
+  plugins: [
+    new webpack.optimize.CommonsChunkPlugin('chunk', 'chunked.js')
+  ]
 };

@@ -9,7 +9,4 @@ if (!mainElement) {
 }
 
 
-render  (routes
-,mainElement
-
-);
+render  (routes,mainElement);
