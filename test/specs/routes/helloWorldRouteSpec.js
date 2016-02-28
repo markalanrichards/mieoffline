@@ -3,7 +3,7 @@ import { findDOMNode } from 'react-dom';
 import TestUtils from 'react-addons-test-utils';
 import expect from 'expect';
 
-import HelloWorldRoute from '../../../src/js/routes/helloWorldRoute';
+import HelloWorldRoute from '../../../src/js/routes/portfolioGalleryRoute';
 
 it('renders an h1', function() {
   var component = TestUtils.renderIntoDocument(

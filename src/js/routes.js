@@ -1,14 +1,14 @@
 import React from 'react'
 
-import HelloWorld from './routes/helloWorldRoute'
+import PortfolioGalleryRoute from './routes/portfolioGalleryRoute'
+import PortfolioProjectRoute from './routes/portfolioProjectRoute'
 import AboutRoute from './routes/aboutRoute'
-import RootRoute from './routes/rootRoute'
-import { Router, Route, Link } from 'react-router';
+import { Router, Route, Link, browserHistory} from 'react-router'
 var routes = (
-  <Router>
-    <Route path="root" component={RootRoute}/>
-    <Route path='hello' component={HelloWorld}/>
+  <Router history={browserHistory} >
     <Route path="about" component={AboutRoute}/>
+    <Route path="portfolio" component={PortfolioGalleryRoute}/>
+    <Route path="portfolio/:projectId" component={PortfolioProjectRoute}/>
     <Route path="/" component={AboutRoute}/>
 
   </Router>)
