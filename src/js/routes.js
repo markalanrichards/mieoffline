@@ -3,9 +3,10 @@ import React from 'react'
 import PortfolioGalleryRoute from './routes/portfolioGalleryRoute'
 import PortfolioProjectRoute from './routes/portfolioProjectRoute'
 import AboutRoute from './routes/aboutRoute'
-import { Router, Route, Link, browserHistory} from 'react-router'
+import { Router, Route, Link} from 'react-router'
 var routes = (
-  <Router history={browserHistory} >
+  <Router
+  >
     <Route path="about" component={AboutRoute}/>
     <Route path="portfolio" component={PortfolioGalleryRoute}/>
     <Route path="portfolio/:projectId" component={PortfolioProjectRoute}/>

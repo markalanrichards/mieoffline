@@ -32,8 +32,11 @@
     "babel-loader": "6.2.4",
     "babel-preset-es2015": "6.5.0",
     "babel-preset-react": "6.5.0",
+    "basscss": "8.0.1",
+    "css-loader": "0.23.1",
     "expect": "1.14.0",
     "express": "4.13.4",
+    "extract-text-webpack-plugin": "1.0.1",
     "history": "2.0.0",
     "html-loader": "0.4.3",
     "jsdoc": "3.4.0",
@@ -48,11 +51,13 @@
     "phantomjs-prebuilt": "2.1.4",
     "postcss": "5.0.17",
     "postcss-cssnext": "2.4.0",
+    "postcss-loader": "0.8.1",
     "precss": "1.4.0",
     "react": "0.14.7",
     "react-addons-test-utils": "0.14.7",
     "react-dom": "0.14.7",
     "react-router": "2.0.0-rc4",
+    "style-loader": "0.13.0",
     "webpack": "1.12.14"
   }
 }
