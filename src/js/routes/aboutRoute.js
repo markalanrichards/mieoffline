@@ -1,4 +1,6 @@
 import React from 'react';
+import Head from '../components/head/head'
+
 import about from 'html!../../html/about.html'
 console.log(typeof about)
 var AboutRoute = React.createClass({
