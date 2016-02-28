@@ -1,15 +1,3 @@
-body {
-  margin: auto 0;
-  font-family: sans-serif;
-  background-color: black;
-}
-
-div {
-  border-width: 2px;
-  border-color: red;
-  border-style: solid;
-}
-
-.about-interest {
-  color: yellow;
+h1 {
+    font-size: 500%;
 }

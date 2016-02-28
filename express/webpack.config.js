@@ -1,6 +1,7 @@
 var webpack = require('webpack');
 var path = require('path');
 var fs = require('fs');
+var ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 var nodeModules = {};
 fs.readdirSync('../node_modules')
@@ -28,7 +29,16 @@ module.exports = {
         presets: ['es2015', 'react'],
       },
     },
+    {
+      test: /\.css$/,
+      loader: ExtractTextPlugin.extract("style-loader", "css-loader"),
+    },
     ],
   },
-
+  postcss: function () {
+      return [require('autoprefixer'), require('precss')];
+  },
+  plugins: [
+        new ExtractTextPlugin("styles.css")
+    ]
 };

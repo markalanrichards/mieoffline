@@ -1,5 +1,6 @@
 import React from 'react'
-import css from './styles.css'
+import { render } from 'react-dom';
+import stylescss from './styles.css'
 
 var Head = React.createClass({
   render() {
