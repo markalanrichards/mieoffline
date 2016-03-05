@@ -3,7 +3,7 @@ import React from 'react'
 var Logo = React.createClass({
   render() {
     return (
-        <span className='flex-auto bold caps h0 mt4'>Mie</span>
+        <div className='flex-auto bold caps h0'>Mie Funahashi</div>
     )
   }
 });
