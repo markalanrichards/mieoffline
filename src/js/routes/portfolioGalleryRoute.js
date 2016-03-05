@@ -1,18 +1,16 @@
 import React from 'react';
+import PortfolioGallery from '../components/portfolioGallery'
+import Container from '../components/container'
+
 
 var PortfolioGalleryRoute = React.createClass({
   render() {
     return (
-      <div>
-        <div className="portfolio-title">
-          <h1>Portfolio</h1>
+      <Container>
+        <div className='flex my4'>
+          <PortfolioGallery />
         </div>
-        <div className="portfolio-gallery">
-          <div>
-            Some Grid
-          </div>
-        </div>
-      </div>
+      </Container>
     )
   }
 });

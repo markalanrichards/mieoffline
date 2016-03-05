@@ -1,6 +1,5 @@
 import React from 'react';
-import Head from '../components/head/head'
-
+import Container from '../components/container'
 import about from 'html!../../html/about.html'
 var AboutRoute = React.createClass({
   render: function () {
@@ -9,10 +8,9 @@ var AboutRoute = React.createClass({
     }
 
     return (
-      <div>
-        <Head />
+        <Container>
         <div dangerouslySetInnerHTML={getAbout()}/>
-      </div>
+        </Container>
     )
   }
 });

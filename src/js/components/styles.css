@@ -1,0 +1,5 @@
+
+.h0 { font-size: var(--h0) }
+:root {
+  --h0: 4rem;
+}

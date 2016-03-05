@@ -12,7 +12,7 @@
     "test-karma": "karma start",
     "test": "npm run test-webpack && npm run test-karma",
     "compile": "npm run clean && cd src/js && webpack",
-    "start": "npm run express-webpack && node --harmony ./dist/express/bundle.js",
+    "start": "npm -s run express-webpack && node --harmony ./dist/express/bundle.js",
     "jenkins": "npm run kill3000 ; npm run purge && npm install -DE && npm run compile && npm run test",
     "jsdoc": "jsdoc src/js/interface/database.js"
   },
@@ -27,6 +27,7 @@
   },
   "homepage": "https://github.com/markalanrichards/mieoffline#readme",
   "devDependencies": {
+    "ace-css": "1.0.1",
     "autoprefixer": "6.3.3",
     "babel-core": "6.5.2",
     "babel-loader": "6.2.4",
@@ -51,6 +52,7 @@
     "phantomjs-prebuilt": "2.1.4",
     "postcss": "5.0.17",
     "postcss-cssnext": "2.4.0",
+    "postcss-import": "8.0.2",
     "postcss-loader": "0.8.1",
     "precss": "1.4.0",
     "react": "0.14.7",

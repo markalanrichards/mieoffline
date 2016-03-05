@@ -1,17 +1,20 @@
 import React from 'react'
-
-import PortfolioGalleryRoute from './routes/portfolioGalleryRoute'
-import PortfolioProjectRoute from './routes/portfolioProjectRoute'
-import AboutRoute from './routes/aboutRoute'
 import { Router, Route, Link} from 'react-router'
-var routes = (
-  <Router
-  >
-    <Route path="about" component={AboutRoute}/>
-    <Route path="portfolio" component={PortfolioGalleryRoute}/>
-    <Route path="portfolio/:projectId" component={PortfolioProjectRoute}/>
-    <Route path="/" component={AboutRoute}/>
 
-  </Router>)
+import PortfolioGallery from './routes/portfolioGalleryRoute'
+import PortfolioProject from './routes/portfolioProjectRoute'
+import About from './routes/aboutRoute'
+import Home from './routes/homeRoute'
+import Blog from './routes/blogRoute'
+
+var routes = (
+  <Router>
+    <Route path="about" component={About}/>
+    <Route path="portfolio" component={PortfolioGallery}/>
+    <Route path="portfolio/:projectId" component={PortfolioProject}/>
+    <Route path="/blog" component={Blog}/>
+    <Route path="/" component={Home}/>
+  </Router>
+)
 
 export default routes

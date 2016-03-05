@@ -1,6 +1,8 @@
 import React from 'react';
+import Container from '../components/container'
 
-var PortfolioProjectRoute = React.createClass({
+
+var PortfolioProject = React.createClass({
   componentDidMount() {
     this.setState({
       projectId: this.props.params.projectId
@@ -8,13 +10,13 @@ var PortfolioProjectRoute = React.createClass({
   },
   render() {
     return (
-      <div>
+      <Container>
         <div className="portfolio-project-title">
           <h1>Project {this.props.params.projectId} </h1>
         </div>
 
-      </div>
+      </Container>
     )
   }
 });
-export default PortfolioProjectRoute;
+export default PortfolioProject;
