@@ -1,17 +1,19 @@
-import React from 'react';
-import Container from '../components/container'
+import React from 'react'
 import about from 'html!../../html/about.html'
+import Head from '../components/head'
+
 var AboutRoute = React.createClass({
   render: function () {
-    function getAbout() {
-      return {__html: about};
+    function getAbout () {
+      return {__html: about}
     }
 
     return (
-        <Container>
-        <div dangerouslySetInnerHTML={getAbout()}/>
-        </Container>
+    <div className="container">
+      <Head />
+      <div dangerouslySetInnerHTML={getAbout()} />
+    </div>
     )
   }
-});
-export default AboutRoute;
+})
+export default AboutRoute

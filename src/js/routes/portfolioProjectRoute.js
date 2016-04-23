@@ -1,6 +1,7 @@
-import React from 'react';
-import Container from '../components/container'
+import React from 'react'
+import Head from '../components/head'
 
+import faker from 'faker'
 
 var PortfolioProject = React.createClass({
   componentDidMount() {
@@ -10,13 +11,10 @@ var PortfolioProject = React.createClass({
   },
   render() {
     return (
-      <Container>
-        <div className="portfolio-project-title">
-          <h1>Project {this.props.params.projectId} </h1>
-        </div>
-
-      </Container>
+    <div className='container'>
+      <h1>Project {this.props.params.projectId}</h1>
+    </div>
     )
   }
-});
-export default PortfolioProject;
+})
+export default PortfolioProject

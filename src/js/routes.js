@@ -1,6 +1,7 @@
 import React from 'react'
 import { Router, Route, Link, browserHistory } from 'react-router'
 
+import Container from './components/container'
 import PortfolioGallery from './routes/portfolioGalleryRoute'
 import PortfolioProject from './routes/portfolioProjectRoute'
 import About from './routes/aboutRoute'

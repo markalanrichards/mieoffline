@@ -1,14 +1,14 @@
 import React from 'react'
-import Container from '../components/container'
-
+import Head from '../components/head'
 
 var Blog = React.createClass({
   render() {
     return (
-      <Container>
-        <h1>Blog</h1>
-      </Container>
+    <div className="container">
+      <Head />
+      <h1>Blog</h1>
+    </div>
     )
   }
-});
-export default Blog;
+})
+export default Blog

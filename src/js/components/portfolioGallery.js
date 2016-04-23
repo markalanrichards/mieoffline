@@ -1,16 +1,18 @@
-import React from 'react';
+import React from 'react'
+import PortfolioGalleryItems from './PortfolioGalleryItems'
 
+class PortfolioGallery extends React.Component {
 
-var PortfolioGallery = React.createClass({
   render() {
     return (
-      <div>
-        <h1>PortfolioGallery</h1>
+    <div>
+      <h1>Portfolio Gallery</h1>
+      <PortfolioGalleryItems />
+    </div>
 
-
-
-      </div>
     )
   }
-});
-export default PortfolioGallery;
+
+}
+
+export default PortfolioGallery

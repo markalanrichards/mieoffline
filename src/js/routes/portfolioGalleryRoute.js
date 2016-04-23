@@ -1,17 +1,17 @@
-import React from 'react';
+import React from 'react'
 import PortfolioGallery from '../components/portfolioGallery'
-import Container from '../components/container'
-
+import Head from '../components/head'
 
 var PortfolioGalleryRoute = React.createClass({
   render() {
     return (
-      <Container>
-        <div className='flex my4'>
-          <PortfolioGallery />
-        </div>
-      </Container>
+    <div className="container">
+      <Head />
+      <div className='flex my4'>
+        <PortfolioGallery />
+      </div>
+    </div>
     )
   }
-});
-export default PortfolioGalleryRoute;
+})
+export default PortfolioGalleryRoute

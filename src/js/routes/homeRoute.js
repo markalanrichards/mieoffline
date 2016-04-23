@@ -1,19 +1,39 @@
 import React from 'react'
-import Container from '../components/container'
-
+import Head from '../components/head'
+import Images from '../components/images'
+import db from '../interface/database'
 
 import HomeHTML from 'html!../../html/home.html'
-var Home = React.createClass({
-  render: function () {
-    function getAbout() {
-      return {__html: HomeHTML};
-    }
 
+class Home extends React.Component {
+  constructor() {
+    super()
+
+    this.state = {
+      site: {
+        name: db.name,
+      },
+      gallery: {
+        image: db.imageUrl,
+        desc: db.desc
+      }
+    }
+  }
+
+  render() {
+    console.log(this.state.gallery.image)
+    function getAbout () {
+      return {
+        __html: HomeHTML
+      }
+    }
     return (
-      <Container>
-        <div dangerouslySetInnerHTML={getAbout()}/>
-      </Container>
+    <div className="container">
+      <Head />
+      <div dangerouslySetInnerHTML={getAbout()} />
+      <Images imageprops={this.state.gallery} />
+    </div>
     )
   }
-});
-export default Home;
+}
+export default Home
